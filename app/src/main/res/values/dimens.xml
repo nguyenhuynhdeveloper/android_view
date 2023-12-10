@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--File sex thống kê kích thước cái mà mình sẽ thiết kế giao diện -->
+<resources>
+    <dimen name="height_layout">500dp</dimen>
+    <dimen name="padding_dimen">20dp</dimen>
+
+</resources>

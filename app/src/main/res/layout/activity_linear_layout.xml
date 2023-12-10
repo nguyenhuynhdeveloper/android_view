@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cho phép gõ tiếng việt không thể thiếu được -->
+<!--
+// Bài8- 9 : Tìm hiểu về View Group LinearLayout trong android
+layout_width , layout_height : là 2 thuộc tính bắt buộc quy định chiều rộng chiều cao
+match_parent : là match với kích thước thằng cha
+wrap_content : bao quanh phạm vi nó chứa - thằng con bao nhiêu thì lấy diện tích bấy nhiêu thôi
+
+android:layout_height="500dp" : có thể fix cứng chiều rộng chiều cao của View
+Có thể viết cứng text  nhưng sẽ báo warning
+nên viết ở @string , @color -> Trong thư mục res- value - color or string
+
+Cần có file thống kê những kích thước fix cứng - thêm file vào thư mục value
+android:background:"color/teal_700     // cho phép set màu cho giao diện
+
+    android:orientation="horizontal"  // Set chiều đặt của View con - theo chiều ngang hay chiều dọc
+    // Bắt buộc nếu có nhiều thành phần bên trong
+
+    paddingTop, paddingStart, paddingBottom, paddingEnd
+    paddingLeft  -> paddingStart
+    paddingRight  -> paddingEnd : nên sử dụng
+
+    padding :  Cả 4 chiều  : Cái sẽ giúp ruột bên trong cách vỏ View bao nhiêu - Phần ruột + padding
+
+    layout_margin : cái sẽ giúp view này cách view khác bao nhiêu
+
+
+ android:gravity="bottom|end" : Căn lề chiều của View
+ android:visibility="gone"  : Hiển thị view hay không  gone là ẩn hẳn đi  mất không gian , invisible : ẩn đi nhưng không gian không bị mất
+   android:layout_weight = "1" : chia phần như flex trong ViewGroup
+    - Cần xác định thuộc tính weightSum ở Group tổng để có thể chặt chẽ nhất
+    - Cần để layout_height = "0dp" - nếu là chiều dọc - chiều ngang thì layout_width = "0dp"
+-->
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="@dimen/height_layout"-->
+<!--    android:background = "@color/purple_200"-->
+<!--    android:orientation="vertical"-->
+<!--    android:paddingTop="@dimen/padding_dimen"-->
+<!--    android:gravity="top|center"-->
+<!--android:visibility="visible"-->
+<!--  >-->
+<!--    <LinearLayout-->
+<!--        android:layout_width = "wrap_content"-->
+<!--        android:layout_height  = "wrap_content"-->
+<!--        android:orientation = "vertical"-->
+<!--        android:layout_margin = "@dimen/padding_dimen"-->
+<!--        >-->
+
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/app_name" />-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/app_name" />-->
+<!--    </LinearLayout>-->
+<!--    <Button-->
+<!--        android:layout_width = "wrap_content"-->
+<!--        android:layout_height = "wrap_content"-->
+<!--        android:text= "@string/submit"-->
+<!--        />-->
+<!--    <Button-->
+<!--        android:layout_width = "wrap_content"-->
+<!--        android:layout_height = "wrap_content"-->
+<!--        android:text= "@string/submit"-->
+<!--        />-->
+
+<!--</LinearLayout>-->
+
+<!-- Để có thể chia 4 phần bằng nhau của màn hình
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/purple_200"
+    android:orientation="vertical"
+    android:weightSum = "6"
+    >
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "0dp"
+        android:background = "@color/violet"
+        android:orientation = "vertical"
+        android:gravity= "center"
+        android:layout_weight = "1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor = "@color/white"
+            android:text = "Layout 1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "0dp"
+        android:background = "@color/yellow"
+        android:orientation = "vertical"
+        android:gravity= "center"
+        android:layout_weight = "2"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor = "@color/black"
+            android:layout_gravity= "start"
+            android:text = "Layout 1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "0dp"
+        android:background = "@color/red"
+        android:orientation = "vertical"
+        android:gravity= "center"
+        android:layout_weight = "3"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor = "@color/white"
+            android:text = "Layout 1"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

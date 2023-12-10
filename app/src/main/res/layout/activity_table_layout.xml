@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Bài 12: Tìm hiểu viewGroup TableLayout trong android - 23/10/2023
+ cực kỳ thuật tiện cho view giống như thời khoá kiểu , thống kê ...
+
+      android:layout_span = '3' // Để có thể 1 ô chiếm bằng chiều rộng 3 ô
+      android:layout_weight = "1"  // Để có thể chia chiều rộng của các cột với nhau
+
+          android:collapseColumns = '1' // Để có thể ẩn đi cột số bao nhiêu 
+ -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableLayout"
+    android:stretchColumns = "*"
+
+    >
+    <TableRow
+        android:background= "@android:color/darker_gray">
+<TextView
+    android:text = "Name"
+    android:textStyle = "bold"
+    android:layout_width="0dp"
+    android:layout_weight = "1"
+    />
+        <TextView
+            android:text = "Address"
+            android:textStyle = "bold"
+            android:layout_width="0dp"
+            android:layout_weight = "2"
+            />
+        <TextView
+            android:text = "Phone"
+            android:textStyle = "bold"
+            android:layout_width="0dp"
+            android:layout_weight = "3"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text = "TinCoder"
+            android:textStyle = "bold"/>
+        <TextView
+            android:text = "Ha Noi"
+            android:textStyle = "bold"/>
+        <TextView
+            android:text = "0335526365"
+            android:textStyle = "bold"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text = "TinCoder"
+            android:background= "@color/red"
+            android:textStyle = "bold"
+            android:layout_span = '3'
+            />
+
+    </TableRow>
+
+
+</TableLayout>
