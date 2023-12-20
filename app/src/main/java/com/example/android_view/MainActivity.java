@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // Bước2: Khai báo và ánh xạ view
         TextView tvTitle = findViewById(R.id.tv_title);  // Khai báo và ánh xạ view
         // Bước3: Xử lý logic và sự kiện

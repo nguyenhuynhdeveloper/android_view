@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_view">
         <activity
+            android:name=".FragmentKotlin_TuHoc.MainActivityKotlin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".TableLayout"
             android:exported="false" />
         <activity
@@ -18,13 +26,12 @@
         <activity
             android:name=".RelativeLayout"
             android:exported="true">
-            <intent-filter>
 
-                <!-- Cái nào nhận action là MAIN , category là LAUCHER thì nó sẽ là màn hình đầu tiên được hiển thị -->
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                &lt;!&ndash; Cái nào nhận action là MAIN , category là LAUCHER thì nó sẽ là màn hình đầu tiên được hiển thị &ndash;&gt;-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".LinearLayout"
