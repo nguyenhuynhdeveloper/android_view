@@ -1,4 +1,4 @@
-package com.example.android_view.FragmentKotlin_TuHoc
+package com.example.android_view.fragmentKotlin_TuHoc
 
 import android.os.Bundle
 import android.widget.Toast
@@ -18,9 +18,6 @@ class MainActivityKotlin : AppCompatActivity() {
         btn_mainAcitivityKotlin.setOnClickListener {
             Toast.makeText(this@MainActivityKotlin, "Tự học lập trình android", Toast.LENGTH_LONG).show()
         }
-
-
-
 
     }
 }

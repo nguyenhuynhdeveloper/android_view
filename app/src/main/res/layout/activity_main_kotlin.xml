@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentKotlin_TuHoc.MainActivityKotlin">
+    tools:context=".fragmentKotlin_TuHoc.MainActivityKotlin">
     <TextView
         android:id = "@+id/txt_fragment_1"
         android:layout_width="wrap_content"
